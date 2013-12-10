@@ -1,0 +1,21 @@
+<h1>Catalog</h1> 
+<div id="product-list"> 
+<table> 
+
+<% for product in @products %> 
+<tr class="<%= cycle('list-line-odd', 'list-line-even') %>"> 
+<td> 
+<img class="list-image" src="<%= product.image_url %>" width="100" /> 
+</td> 
+
+<td> 
+<span class="list-title"><%= h(product.title) %></span><br /> <%= h(product.description) %> 
+</td> 
+
+<td><%= number_to_currency(product.price) %> 
+<td><%= button_to "Add to Cart" %>
+</tr> 
+
+<% end %> 
+</table> 
+</div>

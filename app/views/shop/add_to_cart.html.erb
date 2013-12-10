@@ -1,0 +1,9 @@
+<h1> Your Cart </h1>
+
+<ul>
+<% for item in @cart.items %>
+<li><%= h(item.title) %>
+<% end %>
+</ul>
+
+<%= link_to "Clear Cart", :action => "clear_cart" %>

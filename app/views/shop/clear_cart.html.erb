@@ -1,0 +1,9 @@
+<h1> Cleared! </h1>
+
+<ul>
+<% for item in @cart.items %>
+<li><%= h(item.title) %>
+<% end %>
+</ul>
+
+<%= link_to "Return to Shop", :action => "index" %>
