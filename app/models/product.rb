@@ -6,8 +6,4 @@ class Product < ActiveRecord::Base
     find(:all, :order => "title")
   end
   
-  protected
-  def validate
-    errors.add(:price, "should be at least $0.01") if price.nil? || price < 0.01
-  end
 end
